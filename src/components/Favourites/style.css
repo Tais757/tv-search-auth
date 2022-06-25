@@ -1,0 +1,89 @@
+#container-favCount{
+    width: 90%;
+    margin: 10px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 0;
+    font-family: 'regular';
+    font-size: 110%;
+}
+
+#favCount{
+    margin-left: 10px;
+    background-color: #f3ce28da;
+    display: flex;
+    width: auto;
+    align-items: center;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#favCount img{
+    filter: invert(100%);
+    margin: 0 5px 0 10px;
+    display: flex;
+    height: 18px;
+    align-items: center;
+}
+
+#favCount span{
+    margin: 0 10px 0 5px;
+}
+
+#favClear{
+    background-color: lightgray;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#result-area{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #result-area{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 515px) {
+
+    #result-area{
+        justify-content: center;
+    }
+
+    #container-favCount{
+        margin: 0 auto;
+        justify-content: center;
+    }
+}
+
+
+/*.carregando > img {
+    width: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 10px 0 auto;
+}
+
+.carregando a img {
+    filter: invert(100%);
+    width: 32px;
+}
+
+.tv-card::after, .tv-card.fav::after {
+    content: '\2605';
+    color: var(--primary);
+    position: absolute;
+    top: 0;
+    left: 8px;
+    font-size: 3.2rem;
+}
+
+.tv-card.fav:hover:after {
+    content: '\2606';
+}*/

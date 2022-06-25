@@ -1,8 +1,18 @@
+import { renderSearchForm } from './components/Header'
 import './style.css'
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+const $ = document.querySelector.bind(document)
+const token = localStorage.getItem('token')
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+if (token) {
+    const container = <HTMLDivElement>$('#container')
+    renderSearchForm(container)
+    const resultArea = document.createElement('div')
+    resultArea.id = 'result-area'
+    container.insertAdjacentElement('beforeend', resultArea)
+    const loadingContainer = document.createElement('div')
+    loadingContainer.id = 'carregando'
+    resultArea.insertAdjacentElement('afterbegin',loadingContainer)
+} else {
+    location.href = 'login.html'
+}
